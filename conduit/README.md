@@ -3,14 +3,16 @@ https://github.com/bcaccinolo/realworld-starter-kit
 
 # Todo 
 
-- {{APIURL}}/tags
-
-    - 🔥 creation des entités 
-    - création de la DB
-    - création du service pour get les articles 
-    - creation du controller
-
-- {{APIURL}}/articles
+- ✅ {{APIURL}}/tags
+    - ✅ creation des entités 
+    - ✅ création de la DB
+    - ✅ création du service pour get les articles
+        - méthode pour créer une liste de random tags à partir d'une liste
+        - retourne la liste de tous les tags (findAll)
+    - ✅ creation du controller
+        - the endpoint returns an object with a key 'tags'
+           
+- 🔥 {{APIURL}}/articles
     - creation des entités 
     - création de la DB
     - création du service pour get les articles 
