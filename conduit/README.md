@@ -1,7 +1,7 @@
-# Source : 
+# Source
 https://github.com/bcaccinolo/realworld-starter-kit
 
-# Todo 
+# Todo
 
 - ✅ {{APIURL}}/tags
     - ✅ creation des entités 
@@ -11,14 +11,24 @@ https://github.com/bcaccinolo/realworld-starter-kit
         - retourne la liste de tous les tags (findAll)
     - ✅ creation du controller
         - the endpoint returns an object with a key 'tags'
-           
-- 🔥 {{APIURL}}/articles
-    - creation des entités 
-    - création de la DB
-    - création du service pour get les articles 
+  
+- ✅ {{APIURL}}/articles
+    - ✅ creation des entités et repository
+    - ✅ création de données de tests
+        - get the content of Json file 
+        - deserialize one article in JSON format with Jackson
+        - deserialize an article list with Jackson
+    - ✅ créaction du controller
+    - ✅ ajout timestamp dans modèle
+    - ✅ ajout updatedDate
+
+
+- 🔥 {{APIURL}}/articles V2 - associations
+    - 🔥 author associations
+    - tags list as array of string 
+        
     
-
-
+- aggrandir la taille du champs 'body' > TEXT    
 
 ## Notes
 

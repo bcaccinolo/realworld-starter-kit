@@ -17,7 +17,10 @@ public class TagService {
         return (ArrayList<Tag>) repository.findAll();
     }
 
-    public void createTags() {
+    /**
+     * Create tags for testing purpose
+     */
+    public void createSome() {
         Tag tag;
         String[] names = {"tag1", "tag2", "tag3", "tag5", "tag5"};
 
@@ -26,6 +29,16 @@ public class TagService {
             tag.setName(name);
             repository.save(tag);
         }
+    }
+
+    /**
+     * List all the saved tags
+     */
+    public void listAll() {
+        ArrayList<Tag> tags = this.get();
+        tags.forEach((t) -> {
+            System.out.println(t.getName());
+        });
     }
 
 }
