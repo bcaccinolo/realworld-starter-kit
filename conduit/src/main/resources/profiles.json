@@ -1,0 +1,15 @@
+[
+  {
+  "slug": "article1",
+  "title": "this is a title",
+  "description": "this is a description",
+  "body": "simply dummy text of the printing "
+  },
+
+  {
+    "slug": "article2",
+    "title": "this is a second title",
+    "description": "this is a second description",
+    "body": "simply dummy text of the printing "
+  }
+]

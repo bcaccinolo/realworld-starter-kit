@@ -2,6 +2,7 @@ package org.qbeek;
 
 import org.qbeek.services.ArticleService;
 import org.qbeek.services.BeanService;
+import org.qbeek.services.ProfileService;
 import org.qbeek.services.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -17,6 +18,7 @@ public class App {
     @Autowired private TagService tagService;
     @Autowired private BeanService beanService;
     @Autowired private ArticleService articleService;
+    @Autowired private ProfileService profileService;
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
@@ -33,6 +35,9 @@ public class App {
 
             articleService.createSome();
             articleService.listAll();
+
+            profileService.createSome();
+            profileService.listAll();
         };
     }
 }
