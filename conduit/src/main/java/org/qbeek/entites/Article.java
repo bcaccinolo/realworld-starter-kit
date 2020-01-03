@@ -23,6 +23,9 @@ public class Article {
     private String title;
     private String body;
 
+    @ManyToOne
+    private Profile author;
+
     @CreatedDate
     private Date createdAt;
 

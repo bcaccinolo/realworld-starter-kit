@@ -3,6 +3,8 @@ package org.qbeek.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.qbeek.entites.Article;
 import org.qbeek.entites.ArticleRepository;
+import org.qbeek.entites.Profile;
+import org.qbeek.entites.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,14 +20,14 @@ import java.util.ArrayList;
 @Service
 public class ArticleService {
 
-    @Autowired
-    private ArticleRepository repository;
+    @Autowired private ArticleRepository articleRepository;
+    @Autowired private ProfileRepository profileRepository;
 
     /**
      * Fetch all Articles
      */
     public ArrayList<Article> get() {
-        return (ArrayList<Article>) repository.findAll();
+        return (ArrayList<Article>) articleRepository.findAll();
     }
 
     /**
@@ -39,9 +41,12 @@ public class ArticleService {
         ObjectMapper jsonMapper = new ObjectMapper();
         Article[] articles = jsonMapper.readValue(fileUrl, Article[].class);
 
+        Profile profile = profileRepository.findFirstByUsername("celeb_benoit");
+
         // a nice way to iterate over arrays
         for (Article article : articles) {
-            repository.save(article);
+            article.setAuthor(profile);
+            articleRepository.save(article);
         }
     }
 

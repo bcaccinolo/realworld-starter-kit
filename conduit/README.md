@@ -24,10 +24,11 @@ https://github.com/bcaccinolo/realworld-starter-kit
 
 
 - 🔥 {{APIURL}}/articles V2 - associations
-    - 🔥 author associations
-    - tags list as array of string 
-        
+    - ✅ author associations > @ManyToOne
+    - ✅ serialize the association Article.Profile : automatic     
     
+    
+- tags list as array of string 
 - aggrandir la taille du champs 'body' > TEXT    
 
 ## Notes

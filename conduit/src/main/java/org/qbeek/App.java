@@ -33,11 +33,11 @@ public class App {
             tagService.createSome();
             tagService.listAll();
 
-            articleService.createSome();
-            articleService.listAll();
-
             profileService.createSome();
             profileService.listAll();
+
+            articleService.createSome();
+            articleService.listAll();
         };
     }
 }
