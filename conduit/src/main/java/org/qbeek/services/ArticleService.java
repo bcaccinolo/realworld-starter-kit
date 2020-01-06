@@ -1,10 +1,7 @@
 package org.qbeek.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.qbeek.entites.Article;
-import org.qbeek.entites.ArticleRepository;
-import org.qbeek.entites.Profile;
-import org.qbeek.entites.ProfileRepository;
+import org.qbeek.entites.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +19,7 @@ public class ArticleService {
 
     @Autowired private ArticleRepository articleRepository;
     @Autowired private ProfileRepository profileRepository;
+    @Autowired private TagRepository tagRepository;
 
     /**
      * Fetch all Articles
@@ -43,9 +41,15 @@ public class ArticleService {
 
         Profile profile = profileRepository.findFirstByUsername("celeb_benoit");
 
+        ArrayList<Tag> ttt = (ArrayList<Tag>) tagRepository.findAll();
+        Tag t = ttt.get(0);
+        System.out.println("the tag name is " + t.getName());
+
         // a nice way to iterate over arrays
         for (Article article : articles) {
             article.setAuthor(profile);
+            article.getTagList().add(t);
+
             articleRepository.save(article);
         }
     }

@@ -6,7 +6,9 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
@@ -25,6 +27,9 @@ public class Article {
 
     @ManyToOne
     private Profile author;
+
+    @ManyToMany
+    private List<Tag> tagList = new ArrayList<>();
 
     @CreatedDate
     private Date createdAt;

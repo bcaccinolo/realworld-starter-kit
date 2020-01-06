@@ -22,13 +22,14 @@ https://github.com/bcaccinolo/realworld-starter-kit
     - ✅ ajout timestamp dans modèle
     - ✅ ajout updatedDate
 
-
-- 🔥 {{APIURL}}/articles V2 - associations
+- ✅ {{APIURL}}/articles - Profile associations
     - ✅ author associations > @ManyToOne
     - ✅ serialize the association Article.Profile : automatic     
-    
-    
-- tags list as array of string 
+
+- ✅ {{APIURL}}/articles - Tags list associations
+    - ✅ associate some tags to Article - ManyToMany  
+    - ✅ serialize `Article.tags` as an array of String
+
 - aggrandir la taille du champs 'body' > TEXT    
 
 ## Notes
