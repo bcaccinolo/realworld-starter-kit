@@ -1,9 +1,9 @@
 # Source
 https://github.com/bcaccinolo/realworld-starter-kit
 
-# Todo
+# Todos
 
-- ✅ {{APIURL}}/tags
+## ✅ GET /tags     
     - ✅ creation des entités 
     - ✅ création de la DB
     - ✅ création du service pour get les articles
@@ -12,7 +12,7 @@ https://github.com/bcaccinolo/realworld-starter-kit
     - ✅ creation du controller
         - the endpoint returns an object with a key 'tags'
   
-- ✅ {{APIURL}}/articles
+## ✅ GET /articles
     - ✅ creation des entités et repository
     - ✅ création de données de tests
         - get the content of Json file 
@@ -21,18 +21,36 @@ https://github.com/bcaccinolo/realworld-starter-kit
     - ✅ créaction du controller
     - ✅ ajout timestamp dans modèle
     - ✅ ajout updatedDate
+    
+## ✅ GET /profile/...
 
-- ✅ {{APIURL}}/articles - Profile associations
+## ✅ /articles <-> Profile associations
     - ✅ author associations > @ManyToOne
-    - ✅ serialize the association Article.Profile : automatic     
-
-- ✅ {{APIURL}}/articles - Tags list associations
+    - ✅ serialize the association Article.Profile : automatic
+         
+## ✅ /articles <-> Tags list associations
     - ✅ associate some tags to Article - ManyToMany  
     - ✅ serialize `Article.tags` as an array of String
 
-- aggrandir la taille du champs 'body' > TEXT    
+## authentification > regarder la partie Spring Security qui se trouve dans le document Java.
+    - voir le UserDetails
+    - 🔥 avoir un exemple d'authentification classique avec une connexion DB
+    
+## POST /users/login
+
+## création d'un article ou d'un auteur ... 
+
+## aggrandir la taille du champs 'body' > TEXT    
 
 ## Notes
+
+## Swagger / OpenAPI file 
+```
+cd ~/dev/apicurito/ui
+ng-node serve
+http://localhost:4200/
+```
+Drag the file
 
 ## DB commands
 Let's get a db
