@@ -34,7 +34,8 @@ https://github.com/bcaccinolo/realworld-starter-kit
 
 ## authentification > regarder la partie Spring Security qui se trouve dans le document Java.
     - voir le UserDetails
-    - 🔥 avoir un exemple d'authentification classique avec une connexion DB
+    - 🔥 avoir un exemple d'authentification classique avec une connexion DB 
+    
     
 ## POST /users/login
 
@@ -45,12 +46,10 @@ https://github.com/bcaccinolo/realworld-starter-kit
 ## Notes
 
 ## Swagger / OpenAPI file 
-```
-cd ~/dev/apicurito/ui
-ng-node serve
-http://localhost:4200/
-```
-Drag the file
+
+Apicurito is launched in the console. 
+
+Drag the OpenApi file to consult the API definitions. It is in accessible from the docker. 
 
 ## DB commands
 Let's get a db
