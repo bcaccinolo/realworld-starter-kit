@@ -35,15 +35,13 @@ https://github.com/bcaccinolo/realworld-starter-kit
 ## authentification > regarder la partie Spring Security qui se trouve dans le document Java.
     - voir le UserDetails
     - 🔥 avoir un exemple d'authentification classique avec une connexion DB 
-    
-    
+
 ## POST /users/login
+    
+## Dockeriser l'app existante    
+    
 
-## création d'un article ou d'un auteur ... 
-
-## aggrandir la taille du champs 'body' > TEXT    
-
-## Notes
+# Notes
 
 ## Swagger / OpenAPI file 
 
